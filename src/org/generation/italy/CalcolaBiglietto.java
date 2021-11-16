@@ -17,27 +17,28 @@ public class CalcolaBiglietto {
 		//Total price
 		double ticketPrice = distance * 0.21;
 		double discount;
+		double ticketDiscounted;
 		
 		//Discount check
 		if (age < 18) {
 			
 			discount = (ticketPrice / 100) * 20;
-			double discountUnder = (ticketPrice - discount);
-			System.out.println("Ticket price: " + discountUnder + "€;");
-			System.out.println("Discount: " + discount + "€;");
+			ticketDiscounted = (ticketPrice - discount);
+			System.out.println("Ticket price: " + String.format("%.2f", ticketDiscounted) + "€;");
+			System.out.println("Discount: " + String.format("%.2f", discount) + "€;");
 			
 		} else if ((age >= 18) && (age < 65)) {
 			
 			discount = (ticketPrice / 100) * 0;
-			System.out.println("Ticket price: " + ticketPrice + "€;");
-			System.out.println("Discount: " + discount + "€;");
+			System.out.println("Ticket price: " + String.format("%.2f", ticketPrice) + "€;");
+			System.out.println("Discount: " + String.format("%.2f", discount) + "€;");
 			
 		} else {
 			
 			discount = (ticketPrice / 100) * 40;
-			double discountOver = (ticketPrice - discount);
-			System.out.println("Ticket price: " + discountOver + "€;");
-			System.out.println("Discount: " + discount + "€;");
+			ticketDiscounted = (ticketPrice - discount);
+			System.out.println("Ticket price: " + String.format("%.2f", ticketDiscounted) + "€;");
+			System.out.println("Discount: " + String.format("%.2f", discount) + "€;");
 			
 		}
 		
