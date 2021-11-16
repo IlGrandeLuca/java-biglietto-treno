@@ -22,9 +22,9 @@ public class CalcolaBiglietto {
 		if (age < 18) {
 			
 			discount = (ticketPrice / 100) * 20;
-			double discountUnder = ticketPrice - discount;
+			double discountUnder = (ticketPrice - discount);
 			System.out.println("Ticket price: " + discountUnder + "€;");
-			System.out.println("Discount: " + discountUnder + "€;");
+			System.out.println("Discount: " + discount + "€;");
 			
 		} else if ((age >= 18) && (age < 65)) {
 			
@@ -35,9 +35,9 @@ public class CalcolaBiglietto {
 		} else {
 			
 			discount = (ticketPrice / 100) * 40;
-			double discountOver = ticketPrice - discount;
-			System.out.println("Ticket price: " + discount + "€;");
-			System.out.println("Discount: " + discountOver + "€;");
+			double discountOver = (ticketPrice - discount);
+			System.out.println("Ticket price: " + discountOver + "€;");
+			System.out.println("Discount: " + discount + "€;");
 			
 		}
 		
